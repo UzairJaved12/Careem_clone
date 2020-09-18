@@ -494,6 +494,7 @@
                                             android:layout_height="59dp"
                                             android:layout_gravity="center"
                                             android:src="@drawable/face"
+                                            android:paddingLeft="5dp"
                                             android:transitionName="picture"
                                             app:civ_border_color="@color/grey_700"
                                             app:civ_border_width="1dp" />
