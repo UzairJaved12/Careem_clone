@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="3dp"
+    android:background="@color/white"
+    android:paddingRight="3dp"
+    tools:context=".HistoryActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/google_map"
+        android:layout_height="300dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+         />
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScor"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        app:behavior_peekHeight="500dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                tools:ignore="MissingConstraints">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="4dp"
+                    app:cardUseCompatPadding="false"
+                    app:cardPreventCornerOverlap="false">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:id="@+id/ride_fare"
+                            android:layout_width="133dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginTop="10dp"
+                            android:paddingLeft="9dp"
+                            android:text="Ride fare"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <View
+                            android:layout_width="150dp"
+                            android:layout_height="0dp"
+                            android:background="@color/transparent" />
+
+                        <LinearLayout
+                            android:layout_width="84dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/pkr_130"
+                                android:layout_width="34dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="PKR"
+                                android:textColor="@color/grey"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/num1130"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:layout_marginLeft="-6dp"
+                                android:gravity="center"
+                                android:text="130"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_arrow_drop_up_24" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardElevation="2dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardUseCompatPadding="false"
+                        app:cardPreventCornerOverlap="false">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/travelled"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="You travelled 8 km in 21 mins"
+                                android:textColor="@color/grey"
+                                android:paddingTop="10dp"
+                                android:paddingLeft="9dp"
+                                android:textSize="10sp"
+
+                                android:layout_marginLeft="5dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+
+                                <TextView
+                                    android:id="@+id/start"
+                                    android:layout_width="283dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="Starting"
+                                    android:paddingLeft="9dp"
+                                    android:paddingTop="10dp"
+                                    android:textSize="10sp"
+                                    android:textColor="@color/black" />
+
+                                <View
+                                    android:layout_width="15dp"
+                                    android:layout_height="0dp"
+                                    android:background="@color/transparent" />
+
+
+                                <TextView
+                                    android:id="@+id/num40"
+                                    android:layout_width="55dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_marginLeft="-6dp"
+                                    android:gravity="center"
+                                    android:paddingLeft="9dp"
+                                    android:text="40"
+                                    android:paddingTop="10dp"
+                                    android:textColor="@color/black"
+                                    android:textSize="10sp"
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+
+                                <TextView
+                                    android:id="@+id/distance"
+                                    android:layout_width="284dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="Distance"
+                                    android:paddingLeft="9dp"
+                                    android:paddingTop="10dp"
+                                    android:textSize="10sp"
+                                    android:textColor="@color/black" />
+
+
+                                <View
+                                    android:layout_width="15dp"
+                                    android:layout_height="0dp"
+                                    android:background="@color/transparent" />
+
+
+                                <TextView
+                                    android:id="@+id/num43"
+                                    android:layout_width="55dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_marginLeft="-6dp"
+                                    android:gravity="center"
+                                    android:text="43.17"
+                                    android:paddingTop="10dp"
+                                    android:textColor="@color/black"
+                                    android:textSize="10sp"
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+
+                                <TextView
+                                    android:id="@+id/wait"
+                                    android:layout_width="284dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:paddingLeft="9dp"
+                                    android:paddingTop="10dp"
+                                    android:textSize="10sp"
+                                    android:text="Waiting (initial + in-journey)"
+                                    android:textColor="@color/black" />
+
+
+                                <View
+                                    android:layout_width="15dp"
+                                    android:layout_height="0dp"
+                                    android:background="@color/transparent" />
+
+
+                                <TextView
+                                    android:id="@+id/num28"
+                                    android:layout_width="55dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:paddingTop="10dp"
+                                    android:layout_marginLeft="-6dp"
+                                    android:gravity="center"
+                                    android:text="28.23"
+                                    android:textColor="@color/black"
+                                    android:textSize="10sp"
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+
+                                <TextView
+                                    android:id="@+id/peak"
+                                    android:layout_width="284dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:paddingTop="10dp"
+                                    android:text="Peak factor 1.1x"
+                                    android:textSize="10sp"
+                                    android:paddingLeft="9dp"
+                                    android:textColor="@color/black" />
+
+
+                                <View
+                                    android:layout_width="15dp"
+                                    android:layout_height="0dp"
+                                    android:background="@color/transparent" />
+
+
+                                <TextView
+                                    android:id="@+id/num11"
+                                    android:layout_width="55dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_marginLeft="-6dp"
+                                    android:gravity="center"
+                                    android:paddingTop="10dp"
+                                    android:text="11.14"
+                                    android:textColor="@color/black"
+                                    android:textSize="10sp"
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+
+                                <TextView
+                                    android:id="@+id/service"
+                                    android:layout_width="286dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:paddingTop="10dp"
+                                    android:text="Service fee"
+                                    android:paddingLeft="9dp"
+                                    android:textSize="10sp"
+                                    android:textColor="@color/black" />
+
+
+                                <View
+                                    android:layout_width="15dp"
+                                    android:layout_height="0dp"
+                                    android:background="@color/transparent" />
+
+
+                                <TextView
+                                    android:id="@+id/num1"
+                                    android:layout_width="55dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:paddingTop="10dp"
+                                    android:layout_marginLeft="-6dp"
+                                    android:gravity="center"
+                                    android:text="1"
+                                    android:textColor="@color/black"
+                                    android:textSize="10sp"
+                                    />
+                            </LinearLayout>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/card_view2"
+                                android:layout_width="match_parent"
+                                android:layout_height="24dp"
+                                android:layout_marginTop="10dp"
+                                app:cardBackgroundColor="@color/white"
+                                >
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/amount"
+                                        android:layout_width="285dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:paddingLeft="9dp"
+                                        android:text="Amount charged"
+                                        android:textColor="@color/black"
+                                        android:textSize="12dp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/num130"
+                                        android:layout_width="69dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="end"
+                                        android:layout_marginLeft="-6dp"
+                                        android:gravity="center"
+                                        android:text="PKR 130"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+
+                                    <View
+                                        android:layout_width="15dp"
+                                        android:layout_height="0dp"
+                                        android:background="@color/transparent" />
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/card_view3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    app:cardBackgroundColor="@color/white"
+                                    app:cardElevation="2dp"
+                                    app:cardCornerRadius="4dp"
+                                    app:cardUseCompatPadding="false"
+                                    app:cardPreventCornerOverlap="false">
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:orientation="horizontal">
+
+                                        <LinearLayout
+                                            android:layout_width="25dp"
+                                            android:layout_height="42dp"
+                                            android:orientation="vertical">
+
+                                            <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="19dp"
+                                                android:paddingLeft="10dp"
+                                                android:src="@drawable/money" />
+                                        </LinearLayout>
+
+                                        <TextView
+                                            android:id="@+id/cash"
+                                            android:layout_width="110dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="left"
+                                            android:layout_marginTop="10dp"
+                                            android:gravity="center_vertical"
+                                            android:paddingLeft="4dp"
+                                            android:text="Cash paid"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp" />
+
+
+                                        <View
+                                            android:layout_width="150dp"
+                                            android:layout_height="0dp"
+                                            android:background="@color/transparent" />
+
+                                        <TextView
+                                            android:id="@+id/pkr_150"
+                                            android:layout_width="55dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="end"
+                                            android:layout_marginLeft="6dp"
+                                            android:layout_marginTop="10dp"
+                                            android:gravity="center"
+                                            android:text="PKR 150"
+                                            android:textColor="@color/black"
+                                            android:textSize="12sp" />
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/rupees"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="26dp"
+                                    android:background="@color/purple_300"
+                                    android:paddingLeft="9dp"
+                                    android:gravity="center_vertical"
+                                    android:text="PKR 20 has been credited to your wallet"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp" />
+
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/card_view4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    app:cardBackgroundColor="@color/white"
+                                    app:cardElevation="2dp"
+                                    app:cardCornerRadius="4dp"
+                                    app:cardUseCompatPadding="false"
+                                    app:cardPreventCornerOverlap="false">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <de.hdodenhof.circleimageview.CircleImageView
+                                            android:id="@+id/img_driver_profile"
+                                            android:layout_width="37dp"
+                                            android:layout_height="59dp"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/face"
+                                            android:transitionName="picture"
+                                            app:civ_border_color="@color/grey_700"
+                                            app:civ_border_width="1dp" />
+
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="50dp"
+                                            android:layout_marginLeft="5dp"
+                                            android:layout_marginRight="10dp"
+                                            android:orientation="vertical">
+
+
+                                            <TextView
+                                                android:id="@+id/tv_driver_name"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="left"
+                                                android:paddingTop="10dp"
+                                                android:text="John Doe"
+                                                android:textColor="@color/black"
+                                                android:textSize="12sp"
+                                                tools:layout_editor_absoluteX="0dp"
+                                                tools:layout_editor_absoluteY="53dp" />
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:text="Car-Black Merhan"
+                                                android:textSize="10dp"/>
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:text="XYZ123"
+                                                android:textSize="8dp" />
+
+                                        </LinearLayout>
+
+                                        <RatingBar
+                                            android:id="@+id/ratingBar"
+                                            android:layout_width="189dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="10dp"
+                                            android:numStars="5"
+                                            android:rating="5"
+                                            android:scaleX="0.3"
+                                            android:scaleY="0.3"
+                                            android:stepSize="1" />
+
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
